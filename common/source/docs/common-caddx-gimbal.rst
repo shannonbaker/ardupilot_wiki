@@ -32,8 +32,9 @@ Connecting to the Autopilot
 
 Connect the gimbal's RX, TX and GND pins to one of the autopilot's serial ports as shown above
 
-Connect with a ground station and set the following parameters.  The params below assume the autopilot's telem2 port is used
-*Note that it is assumed that the FW compilation includes the the CADDX Gimbal and Mount (MNT* params).  Some FW compilations such as Matek F405 Wing, do not have these features enabled by default to save on flash space.  You may need to compile a custom FW that includes these features.
+Connect with a ground station and set the following parameters.  The params below assume the autopilot's telem2 port is used.
+
+Note that it is assumed that the FW compilation includes the the CADDX Gimbal and Mount (MNT* params) features enabled.  Some FW compilations, such as Matek F405 Wing, do not have these features enabled by default to save on flash space.  You may need to compile a custom FW that includes these features.
 
 - :ref:`SERIAL2_PROTOCOL <SERIAL2_PROTOCOL>` to 8 ("Gimbal")
 - :ref:`SERIAL2_BAUD <SERIAL2_BAUD>` to "115" for 115200 bps
