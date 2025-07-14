@@ -33,14 +33,15 @@ Connecting to the Autopilot
 Connect the gimbal's RX, TX and GND pins to one of the autopilot's serial ports as shown above
 
 Connect with a ground station and set the following parameters.  The params below assume the autopilot's telem2 port is used
+*Note that it is assumed that the FW compilation includes the the CADDX Gimbal and Mount (MNT* params).  Some FW compilations such as Matek F405 Wing, do not have these features enabled by default to save on flash space.  You may need to compile a custom FW that includes these features.
 
 - :ref:`SERIAL2_PROTOCOL <SERIAL2_PROTOCOL>` to 8 ("Gimbal")
 - :ref:`SERIAL2_BAUD <SERIAL2_BAUD>` to "115" for 115200 bps
 - :ref:`MNT1_TYPE <MNT1_TYPE>` to "13" ("CADDX") and reboot the autopilot
-- :ref:`MNT1_PITCH_MIN <MNT1_PITCH_MIN>` to -90
-- :ref:`MNT1_PITCH_MAX <MNT1_PITCH_MAX>` to 90
-- :ref:`MNT1_YAW_MIN <MNT1_YAW_MIN>` to -170
-- :ref:`MNT1_YAW_MAX <MNT1_YAW_MAX>` to 170
+- :ref:`MNT1_PITCH_MIN <MNT1_PITCH_MIN>` to -90 (90 if the gimbal is mounted inverted)
+- :ref:`MNT1_PITCH_MAX <MNT1_PITCH_MAX>` to 90 (-90 if the gimbal is mounted inverted)
+- :ref:`MNT1_YAW_MIN <MNT1_YAW_MIN>` to -170 (170 if the gimbal is mounted inverted)
+- :ref:`MNT1_YAW_MAX <MNT1_YAW_MAX>` to 170 (-170 if the gimbal is mounted inverted)
 - :ref:`MNT1_RC_RATE <MNT1_RC_RATE>` to 60 (deg/s) to control speed of gimbal when using RC targetting
 - :ref:`RC6_OPTION <RC6_OPTION>` = 213 ("Mount Pitch") to control the gimbal's pitch angle with RC channel 6
 - :ref:`RC7_OPTION <RC7_OPTION>` = 214 ("Mount Yaw") to control the gimbal's yaw angle with RC channel 7
